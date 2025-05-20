@@ -29,3 +29,43 @@ El código extrae automáticamente información clave de los archivos XML (Encar
   SELECT DISTINCT * FROM prevision_test_electricidad.tablafacts
 
 5. Revisar el resumen semanal generado automáticamente en la hoja de Excel.
+
+
+---
+
+# Análisis y Modelado Predictivo del Cargo de Regulación (ERCBRP)
+
+Este repositorio contiene también el código en Python desarrollado para analizar y predecir los encargos de regulación imputados por REN, usando técnicas de aprendizaje automático.
+
+## Descripción
+
+Incluye análisis exploratorio, tratamiento de outliers, visualización y entrenamiento de modelos de predicción (Random Forest y XGBoost) para anticipar los ERCBRP a partir de variables como generación renovable, precio del pool y desvíos.
+
+## Requisitos
+
+- Entorno de ejecución: Google Colab
+- Python 3.10+
+- Librerías necesarias:
+  - `pandas`
+  - `numpy`
+  - `matplotlib`
+  - `seaborn`
+  - `xgboost`
+  - `sklearn`
+  - `statsmodels`
+  - `plotly`
+
+##  Instrucciones de uso
+
+1. Subir los siguientes datasets:
+   - Base horaria del BRP (precio pool, desvíos, cargo regulación, etc.)
+   - Breakdown of Production (producción eléctrica por tecnología)
+   
+2. Ejecutar las celdas del notebook en orden:
+   - Análisis exploratorio
+   - Tratamiento de outliers
+   - Matriz de correlación
+   - Modelado con Random Forest y XGBoost
+   - Evaluación con métricas (MAE, RMSE)
+
+3. Consultar los gráficos generados para interpretar resultados.
